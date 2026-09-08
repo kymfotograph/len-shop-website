@@ -51,10 +51,6 @@ p { margin: 0 0 1em; }
   margin-bottom: 14px;
 }
 .eyebrow.center { display: block; width: fit-content; margin-left: auto; margin-right: auto; }
-.section-title { font-size: clamp(1.6rem, 3vw, 2.3rem); }
-.section-title.center { text-align: center; }
-.section-sub { color: var(--ink-soft); }
-.section-sub.center { text-align: center; }
 .text-accent { color: var(--rust); }
 
 /* ===== Buttons ===== */
@@ -321,56 +317,6 @@ p { margin: 0 0 1em; }
   margin: 10px 0 0;
 }
 
-/* ===== About ===== */
-.about { padding: 60px 0; background: var(--cream-dark); }
-.about-inner {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 48px;
-  align-items: center;
-}
-.about-art {
-  position: relative;
-  height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about-blob {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #e0a945, #c97b4a);
-  border-radius: 42% 58% 62% 38% / 45% 40% 60% 55%;
-  opacity: .25;
-}
-.about-emoji {
-  font-size: 3.2rem;
-  letter-spacing: 12px;
-  position: relative;
-}
-.about-copy p { color: var(--ink-soft); }
-
-/* ===== Testimonials ===== */
-.testimonials { padding: 70px 0; }
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 36px;
-}
-.testimonial-card {
-  background: var(--white);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  box-shadow: var(--shadow-sm);
-}
-.testimonial-card p { font-style: italic; color: var(--ink); }
-.testimonial-author {
-  font-weight: 700;
-  color: var(--rust-dark);
-  font-size: .9rem;
-}
-
 /* ===== Contact ===== */
 .contact { padding: 60px 0 90px; }
 .contact-inner { max-width: 720px; margin: 0 auto; text-align: center; }
@@ -428,8 +374,6 @@ a.contact-card:hover { transform: translateY(-2px); }
   .product-grid { grid-template-columns: repeat(2, 1fr); grid-template-areas: none; }
   .product-card { grid-area: auto !important; }
   .product-thumb { aspect-ratio: 1 / 1 !important; }
-  .about-inner { grid-template-columns: 1fr; }
-  .testimonial-grid { grid-template-columns: 1fr; }
   .contact-cards { grid-template-columns: 1fr; }
 }
 
