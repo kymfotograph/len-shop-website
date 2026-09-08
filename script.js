@@ -1,11 +1,46 @@
-// ===== Sample product data (placeholder — replace with real photos/prices) =====
+// ===== Featured products — bento layout (1 large + 4 small) =====
+// Real photos from the shop, placeholder names/prices — update once confirmed.
 const PRODUCTS = [
-  { name: "Len Cotton Trơn", type: "Cotton mềm mại", price: "45.000đ", color: "#e0a945" },
-  { name: "Len Mohair Bông", type: "Mohair siêu mịn", price: "68.000đ", color: "#c97b4a" },
-  { name: "Len Acrylic Đa Sắc", type: "Acrylic bền màu", price: "38.000đ", color: "#8fa68e" },
-  { name: "Len Merino Cao Cấp", type: "Merino ấm áp", price: "89.000đ", color: "#d98b8b" },
-  { name: "Len Sợi Xoắn", type: "Sợi xoắn chắc tay", price: "52.000đ", color: "#7f9fc9" },
-  { name: "Len Nhung Baby", type: "Mềm cho đồ trẻ em", price: "60.000đ", color: "#e0a945" },
+  {
+    area: "feat-a",
+    size: "wide",
+    img: "images/product-1.jpg",
+    name: "Móc Khoá Hoa Len",
+    type: "Hoa len 3D nhiều màu",
+    price: "35.000đ",
+  },
+  {
+    area: "feat-b",
+    size: "small",
+    img: "images/product-2.jpg",
+    name: "Móc Khoá Trái Cherry",
+    type: "Đan tay, sợi bóng mềm",
+    price: "30.000đ",
+  },
+  {
+    area: "feat-c",
+    size: "small",
+    img: "images/product-3.jpg",
+    name: "Móc Khoá Thỏ Bông",
+    type: "Thú bông mini dễ thương",
+    price: "45.000đ",
+  },
+  {
+    area: "feat-d",
+    size: "small",
+    img: "images/product-4.jpg",
+    name: "Móc Khoá Phù Thuỷ",
+    type: "Chi tiết tỉ mỉ, độc bản",
+    price: "55.000đ",
+  },
+  {
+    area: "feat-e",
+    size: "large",
+    img: "images/product-5.jpg",
+    name: "Đặt Riêng Theo Yêu Cầu",
+    type: "Thú bông, doll nhân vật, móc khoá — đủ mẫu, đủ màu",
+    price: "Liên hệ báo giá",
+  },
 ];
 
 function renderProducts() {
@@ -13,25 +48,19 @@ function renderProducts() {
   if (!grid) return;
 
   grid.innerHTML = PRODUCTS.map((p) => `
-    <div class="product-card">
-      <div class="product-thumb" style="background:${hexToSoftBg(p.color)}">
-        <div class="ball" style="color:${p.color}"></div>
+    <div class="product-card bento-${p.size}" style="grid-area:${p.area}">
+      <div class="product-thumb">
+        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.closest('.product-thumb').classList.add('thumb-fallback')">
       </div>
       <div class="product-name">${p.name}</div>
       <div class="product-meta">${p.type}</div>
       <div class="product-price">${p.price}</div>
       <div class="product-actions">
+        <a href="#lien-he" class="btn btn-outline btn-small btn-block">Xem chi tiết</a>
         <a href="#lien-he" class="btn btn-primary btn-small btn-block">Đặt hàng</a>
       </div>
     </div>
   `).join("");
-}
-
-function hexToSoftBg(hex) {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return `rgba(${r}, ${g}, ${b}, 0.14)`;
 }
 
 // ===== Mobile nav toggle =====
