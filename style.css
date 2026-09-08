@@ -48,17 +48,6 @@ p { margin: 0 0 1em; }
   padding: 0 24px;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-weight: 700;
-  color: var(--rust-dark);
-  background: var(--mustard);
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-size: .85rem;
-  margin-bottom: 14px;
-}
-.eyebrow.center { display: block; width: fit-content; margin-left: auto; margin-right: auto; }
 .text-accent { color: var(--rust); }
 
 /* ===== Buttons ===== */
@@ -492,31 +481,6 @@ p { margin: 0 0 1em; }
 }
 .about-email:hover { transform: translateY(-2px); }
 
-/* ===== Contact ===== */
-.contact { padding: 60px 0 90px; }
-.contact-inner { max-width: 720px; margin: 0 auto; text-align: center; }
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 30px;
-  text-align: left;
-}
-.contact-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: var(--white);
-  border-radius: var(--radius-md);
-  padding: 18px;
-  box-shadow: var(--shadow-sm);
-  transition: transform .15s ease;
-}
-a.contact-card:hover { transform: translateY(-2px); }
-.contact-icon { font-size: 1.6rem; }
-.contact-card strong { display: block; font-family: var(--font-display); }
-.contact-card span { color: var(--ink-soft); font-size: .88rem; }
-
 /* ===== Footer ===== */
 .site-footer {
   background: var(--dark);
@@ -549,7 +513,6 @@ a.contact-card:hover { transform: translateY(-2px); }
   .product-grid { grid-template-columns: repeat(2, 1fr); grid-template-areas: none; }
   .product-card { grid-area: auto !important; }
   .product-thumb { aspect-ratio: 1 / 1 !important; }
-  .contact-cards { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
