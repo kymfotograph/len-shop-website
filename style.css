@@ -285,24 +285,23 @@ p { margin: 0 0 1em; }
 .yarn-card.card-2 { left: 145px; background: var(--mustard); transform: rotate(4deg); z-index: 2; --yarn-color: var(--rust-dark); }
 .yarn-card.card-3 { left: 290px; background: var(--cream); transform: rotate(11deg); z-index: 3; --yarn-color: var(--rust); }
 
-.hero-spark {
-  position: absolute;
-  font-size: 1.8rem;
-  color: var(--rust-dark);
-  transform: rotate(-10deg);
-  z-index: 4;
-}
-.hero-spark-1 { top: -14px; left: 30px; }
-.hero-spark-2 { top: -10px; right: 20px; transform: rotate(14deg); color: var(--sage); }
-
 .sparkle {
   position: absolute;
   color: var(--mustard);
   font-size: 1.6rem;
+  animation: twinkle 1.8s ease-in-out infinite;
 }
 .sparkle-1 { top: -10px; left: 200px; }
-.sparkle-2 { bottom: -6px; right: 30px; font-size: 1.2rem; color: var(--rust); }
-.sparkle-3 { bottom: 10px; left: -6px; font-size: 1.1rem; color: var(--sage); }
+.sparkle-2 { bottom: -6px; right: 30px; font-size: 1.2rem; color: var(--rust); animation-delay: .5s; }
+.sparkle-3 { bottom: 10px; left: -6px; font-size: 1.1rem; color: var(--sage); animation-delay: 1s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .25; transform: scale(.7); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sparkle { animation: none; }
+}
 
 /* ===== Products — bento 11 ô, không nền, chỉ ảnh + tên ===== */
 .products { padding: 50px 0 90px; }
