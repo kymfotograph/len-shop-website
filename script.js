@@ -12,6 +12,18 @@ const PRODUCTS = [
   { area: "r4c1", size: "normal", img: "images/product-9.jpg", name: "Witch Keychain" },
   { area: "r4c2", size: "normal", img: "images/product-10.jpg", name: "Sweater Doll" },
   { area: "r4c3", size: "normal", img: "images/product-11.jpg", name: "Smiley Keychain" },
+  // Block 2 — same 4-row bento pattern repeated (placeholder photos, swap later)
+  { area: "b1c1", size: "normal", img: "images/product-12.jpg", name: "Bunny Charm" },
+  { area: "b1c2", size: "normal", img: "images/product-13.jpg", name: "Mario Doll" },
+  { area: "b1c3", size: "normal", img: "images/product-14.jpg", name: "Witch Doll" },
+  { area: "b2wide", size: "wide", img: "images/product-15.jpg", name: "Flower Charm" },
+  { area: "b2n", size: "normal", img: "images/product-16.jpg", name: "Mystery Charm" },
+  { area: "b3n1", size: "normal", img: "images/product-17.jpg", name: "Custom Figure" },
+  { area: "b3n2", size: "normal", img: "images/product-18.jpg", name: "Plush Charm" },
+  { area: "b3big", size: "large", img: "images/product-19.jpg", name: "Featured Piece" },
+  { area: "b4c1", size: "normal", img: "images/product-20.jpg", name: "Doll Outfit" },
+  { area: "b4c2", size: "normal", img: "images/product-21.jpg", name: "Keychain Set" },
+  { area: "b4c3", size: "normal", img: "images/product-22.jpg", name: "Handmade Charm" },
 ];
 
 function renderProducts() {
