@@ -231,6 +231,7 @@ p { margin: 0 0 1em; }
   text-transform: uppercase;
   margin-bottom: 0;
 }
+.mobile-break { display: none; }
 
 .hero-art {
   position: relative;
@@ -516,6 +517,7 @@ p { margin: 0 0 1em; }
 }
 
 @media (max-width: 640px) {
+  .mobile-break { display: block; }
   .hero-top { flex-direction: row; }
   .hero-side { font-size: .78rem; max-width: 130px; }
   .hero-phone { font-size: .85rem; }
