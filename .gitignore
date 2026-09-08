@@ -1,2 +1,4 @@
 images/Len của Mẹ/
 .DS_Store
+.vercel
+.env*
