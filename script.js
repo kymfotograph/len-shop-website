@@ -3,8 +3,8 @@
 const PRODUCTS = [
   // Line 1 (3 cards)
   { area: "l1a", size: "normal", img: "images/product-1.jpg", name: "Mini Flower" },
-  { area: "l1b", size: "normal", img: "images/product-2.jpg", name: "Tulip" },
-  { area: "l1c", size: "normal", img: "images/product-3.jpg", name: "Bel Flower" },
+  { area: "l1b", size: "normal", img: "images/product-2.jpg", name: "Tulip", pos: "center bottom" },
+  { area: "l1c", size: "normal", img: "images/product-3.jpg", name: "Bel Flower", pos: "center bottom" },
   // Line 2 (wide + normal)
   { area: "l2w", size: "wide", img: "images/product-4.jpg", name: "Character Doll" },
   { area: "l2n", size: "normal", img: "images/product-5.jpg", name: "Mario Doll" },
