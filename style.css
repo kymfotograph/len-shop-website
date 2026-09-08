@@ -339,9 +339,9 @@ p { margin: 0 0 1em; }
     "l3b   l3big l3big"
     "l4a   l4b   l4c"
     "l5a   l5b   l5c"
-    "l6n   l6w   l6w"
     "l7big l7big l7a"
     "l7big l7big l7b"
+    "l6n   l6w   l6w"
     "l8a   l8b   l8c"
     "l9a   l9big l9big"
     "l9b   l9big l9big"
@@ -353,7 +353,11 @@ p { margin: 0 0 1em; }
     "l14a  l14b  l14c"
     "l15a  l15big l15big"
     "l15b  l15big l15big"
-    "l16a  l16b  l16c";
+    "l16a  l16b  l16c"
+    "l17a  l17b  l17c"
+    "l18w  l18w  l18n"
+    "l19a  l19big l19big"
+    "l19b  l19big l19big";
   gap: 18px;
 }
 .product-card {
@@ -364,25 +368,32 @@ p { margin: 0 0 1em; }
 }
 .product-card:hover { transform: translateY(-4px); }
 .product-thumb {
+  position: relative;
   width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--cream-dark);
 }
-.bento-normal .product-thumb {
-  width: 88%;
-  margin: 0 auto;
-  aspect-ratio: 1 / 1;
-}
-/* Card dài = 2 cột + 1 gap ngang, cao bằng 1 card thường (1 cột) */
+/* Card thường = 1 cột → hình vuông. Card dài = 2 cột + 1 gap, cao bằng card thường.
+   Card to = 2 cột x 2 hàng (kể cả gap) → hình vuông, khớp đúng 2 card thường xếp chồng.
+   Tất cả cùng lấy chiều rộng 1 cột làm gốc nên luôn khớp chiều cao ở mọi kích thước màn hình. */
+.bento-normal .product-thumb { aspect-ratio: 1 / 1; }
 .bento-wide .product-thumb { aspect-ratio: 2.05 / 1; }
-/* Card to = 2 cột x 2 hàng (kể cả gap) → luôn là hình vuông, khớp đúng 2 card thường xếp chồng */
 .bento-large .product-thumb { aspect-ratio: 1 / 1; }
 .product-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+/* "Card thường nhỏ hơn xíu": inset ảnh bên trong thay vì co nhỏ khung,
+   để không ảnh hưởng phép tính chiều cao ở trên. */
+.bento-normal .product-thumb img {
+  position: absolute;
+  inset: 6%;
+  width: auto;
+  height: auto;
+  border-radius: inherit;
 }
 .product-name {
   font-family: var(--font-display);
