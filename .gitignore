@@ -1,4 +1,6 @@
 images/Len của Mẹ/
+images/Avata/
+*.zip
 .DS_Store
 .vercel
 .env*
