@@ -237,7 +237,7 @@ p { margin: 0 0 1em; }
 
 .hero-headline {
   font-size: clamp(4rem, 13vw, 7.2rem);
-  line-height: .82;
+  line-height: 1.3;
   letter-spacing: .5px;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -245,7 +245,7 @@ p { margin: 0 0 1em; }
 
 .hero-art {
   position: relative;
-  max-width: 480px;
+  max-width: 560px;
   height: 230px;
   margin: 40px auto 0;
 }
@@ -260,6 +260,7 @@ p { margin: 0 0 1em; }
   align-items: center;
   justify-content: center;
   background: var(--white);
+  transition: transform .45s cubic-bezier(.34, 1.56, .64, 1);
 }
 .yarn-card::before {
   content: "";
@@ -282,25 +283,42 @@ p { margin: 0 0 1em; }
 }
 /* 1 hàng ngang, chỉ lệch trái→phải, xoay góc khác nhau. Trái = dưới cùng, phải = trên cùng. */
 .yarn-card.card-1 { left: 0; background: var(--cream-dark); transform: rotate(-9deg); z-index: 1; --yarn-color: var(--rust); }
-.yarn-card.card-2 { left: 145px; background: var(--mustard); transform: rotate(4deg); z-index: 2; --yarn-color: var(--rust-dark); }
-.yarn-card.card-3 { left: 290px; background: var(--cream); transform: rotate(11deg); z-index: 3; --yarn-color: var(--rust); }
+.yarn-card.card-2 { left: 165px; background: var(--mustard); transform: rotate(4deg); z-index: 2; --yarn-color: var(--rust-dark); }
+.yarn-card.card-3 { left: 330px; background: var(--cream); transform: rotate(11deg); z-index: 3; --yarn-color: var(--rust); }
+.yarn-card.card-1:hover { transform: translateY(-16px) rotate(-9deg); z-index: 5; }
+.yarn-card.card-2:hover { transform: translateY(-16px) rotate(4deg); z-index: 5; }
+.yarn-card.card-3:hover { transform: translateY(-16px) rotate(11deg); z-index: 5; }
 
 .sparkle {
   position: absolute;
+  z-index: 6;
   color: var(--mustard);
   font-size: 1.6rem;
   animation: twinkle 1.8s ease-in-out infinite;
 }
-.sparkle-1 { top: -10px; left: 200px; }
-.sparkle-2 { bottom: -6px; right: 30px; font-size: 1.2rem; color: var(--rust); animation-delay: .5s; }
-.sparkle-3 { bottom: 10px; left: -6px; font-size: 1.1rem; color: var(--sage); animation-delay: 1s; }
+.sparkle-1 { top: -34px; left: 220px; font-size: 3.6rem; color: var(--rust-dark); }
+.sparkle-2 { bottom: -16px; right: 20px; font-size: 1.4rem; color: var(--rust); animation-delay: .5s; }
+.sparkle-3 { bottom: 10px; left: -16px; font-size: 1.3rem; color: var(--sage); animation-delay: 1s; }
+
+.flash {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  color: var(--rust-dark);
+  font-size: 1.1rem;
+  animation: twinkle 1.4s ease-in-out infinite;
+}
+.flash-left-1 { left: -34px; top: 30%; animation-delay: .2s; }
+.flash-left-2 { left: -50px; top: 65%; font-size: .9rem; color: var(--sage); animation-delay: .8s; }
+.flash-right-1 { right: -34px; top: 32%; animation-delay: .4s; }
+.flash-right-2 { right: -52px; top: 68%; font-size: .9rem; color: var(--sage); animation-delay: 1.1s; }
 
 @keyframes twinkle {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: .25; transform: scale(.7); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .sparkle { animation: none; }
+  .sparkle, .flash { animation: none; }
 }
 
 /* ===== Products — bento 11 ô, không nền, chỉ ảnh + tên ===== */
@@ -315,16 +333,27 @@ p { margin: 0 0 1em; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    "r1c1   r1c2  r1c3"
-    "r2wide r2wide r2n"
-    "r3n1   r3big r3big"
-    "r3n2   r3big r3big"
-    "r4c1   r4c2  r4c3"
-    "b1c1   b1c2  b1c3"
-    "b2wide b2wide b2n"
-    "b3n1   b3big b3big"
-    "b3n2   b3big b3big"
-    "b4c1   b4c2  b4c3";
+    "l1a   l1b   l1c"
+    "l2w   l2w   l2n"
+    "l3a   l3big l3big"
+    "l3b   l3big l3big"
+    "l4a   l4b   l4c"
+    "l5a   l5b   l5c"
+    "l6n   l6w   l6w"
+    "l7big l7big l7a"
+    "l7big l7big l7b"
+    "l8a   l8b   l8c"
+    "l9a   l9big l9big"
+    "l9b   l9big l9big"
+    "l10a  l10b  l10c"
+    "l11w  l11w  l11n"
+    "l12a  l12big l12big"
+    "l12b  l12big l12big"
+    "l13a  l13b  l13c"
+    "l14a  l14b  l14c"
+    "l15a  l15big l15big"
+    "l15b  l15big l15big"
+    "l16a  l16b  l16c";
   gap: 18px;
 }
 .product-card {
@@ -427,12 +456,14 @@ a.contact-card:hover { transform: translateY(-2px); }
   .hero-top { flex-direction: row; }
   .hero-side { font-size: .78rem; max-width: 130px; }
   .hero-phone { font-size: .85rem; }
-  .hero-art { max-width: 100%; height: 150px; margin-top: 28px; }
+  .hero-art { max-width: 100%; height: 160px; margin-top: 28px; }
   .yarn-card { width: 125px; height: 125px; border-radius: var(--radius-md); }
   .yarn-photo { inset: 9px; }
   .yarn-card.card-1 { left: 0; }
-  .yarn-card.card-2 { left: 95px; }
-  .yarn-card.card-3 { left: 190px; }
+  .yarn-card.card-2 { left: 105px; }
+  .yarn-card.card-3 { left: 210px; }
+  .sparkle-1 { font-size: 2.4rem; top: -26px; left: 140px; }
+  .flash-left-1, .flash-left-2, .flash-right-1, .flash-right-2 { display: none; }
 
   .product-grid { grid-template-columns: 1fr 1fr; }
 }
