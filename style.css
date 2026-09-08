@@ -396,6 +396,94 @@ p { margin: 0 0 1em; }
   margin: 10px 0 0;
 }
 
+/* ===== About ThuThuy ===== */
+.about {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0 90px;
+  text-align: center;
+}
+.about .container { position: relative; z-index: 2; }
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  box-shadow: var(--shadow-sm);
+  font-size: .85rem;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+.about-badge strong { color: var(--ink); }
+.about-hey {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.about-name {
+  font-size: clamp(3rem, 8vw, 5.2rem);
+  color: var(--rust-dark);
+  margin: 0 0 32px;
+}
+.about-dot { color: var(--dark); }
+
+.about-polaroid {
+  display: inline-block;
+  background: var(--white);
+  padding: 16px 16px 22px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  transform: rotate(-2deg);
+  margin-bottom: 36px;
+}
+.about-polaroid img {
+  width: 280px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.about-caption {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin: 14px 0 0;
+}
+
+.about-desc {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.about-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.about-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  border: none;
+  background: var(--mustard);
+  color: var(--rust-dark);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.about-email:hover { transform: translateY(-2px); }
+
 /* ===== Contact ===== */
 .contact { padding: 60px 0 90px; }
 .contact-inner { max-width: 720px; margin: 0 auto; text-align: center; }
@@ -479,4 +567,5 @@ a.contact-card:hover { transform: translateY(-2px); }
   .yarn-card.card-1 { left: 0; }
   .yarn-card.card-2 { left: 78px; }
   .yarn-card.card-3 { left: 156px; }
+  .about-polaroid img { width: 100%; max-width: 240px; height: 290px; }
 }

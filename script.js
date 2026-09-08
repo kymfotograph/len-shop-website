@@ -95,7 +95,24 @@ function setFooterYear() {
   if (el) el.textContent = new Date().getFullYear();
 }
 
+// ===== Copy email (About section) =====
+function initEmailCopy() {
+  const btn = document.getElementById("aboutEmail");
+  if (!btn) return;
+  const original = btn.innerHTML;
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.email);
+      btn.innerHTML = "Copied!";
+      setTimeout(() => { btn.innerHTML = original; }, 1500);
+    } catch {
+      // clipboard unavailable — no-op
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   setFooterYear();
+  initEmailCopy();
 });
