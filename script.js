@@ -1,46 +1,17 @@
-// ===== Featured products — bento layout (1 large + 4 small) =====
-// Real photos from the shop, placeholder names/prices — update once confirmed.
+// ===== Products — bento grid (11 ô), chỉ ảnh + tên =====
+// Ảnh thật từ tiệm — tên sản phẩm tạm, cập nhật khi có thông tin chính thức.
 const PRODUCTS = [
-  {
-    area: "feat-a",
-    size: "wide",
-    img: "images/product-1.jpg",
-    name: "Móc Khoá Hoa Len",
-    type: "Hoa len 3D nhiều màu",
-    price: "35.000đ",
-  },
-  {
-    area: "feat-b",
-    size: "small",
-    img: "images/product-2.jpg",
-    name: "Móc Khoá Trái Cherry",
-    type: "Đan tay, sợi bóng mềm",
-    price: "30.000đ",
-  },
-  {
-    area: "feat-c",
-    size: "small",
-    img: "images/product-3.jpg",
-    name: "Móc Khoá Thỏ Bông",
-    type: "Thú bông mini dễ thương",
-    price: "45.000đ",
-  },
-  {
-    area: "feat-d",
-    size: "small",
-    img: "images/product-4.jpg",
-    name: "Móc Khoá Phù Thuỷ",
-    type: "Chi tiết tỉ mỉ, độc bản",
-    price: "55.000đ",
-  },
-  {
-    area: "feat-e",
-    size: "large",
-    img: "images/product-5.jpg",
-    name: "Đặt Riêng Theo Yêu Cầu",
-    type: "Thú bông, doll nhân vật, móc khoá — đủ mẫu, đủ màu",
-    price: "Liên hệ báo giá",
-  },
+  { area: "r1c1", size: "normal", img: "images/product-1.jpg", name: "Móc Khoá Thỏ" },
+  { area: "r1c2", size: "normal", img: "images/product-2.jpg", name: "Móc Khoá Cherry" },
+  { area: "r1c3", size: "normal", img: "images/product-3.jpg", name: "Móc Khoá Chanh Vàng" },
+  { area: "r2wide", size: "wide", img: "images/product-4.jpg", name: "Bó Hoa Len Mini" },
+  { area: "r2n", size: "normal", img: "images/product-5.jpg", name: "Móc Khoá Nho" },
+  { area: "r3n1", size: "normal", img: "images/product-6.jpg", name: "Thú Bông Handmade" },
+  { area: "r3n2", size: "normal", img: "images/product-7.jpg", name: "Doll Tuỳ Chỉnh" },
+  { area: "r3big", size: "large", img: "images/product-8.jpg", name: "Bộ Sưu Tập Đặt Riêng" },
+  { area: "r4c1", size: "normal", img: "images/product-9.jpg", name: "Móc Khoá Phù Thuỷ" },
+  { area: "r4c2", size: "normal", img: "images/product-10.jpg", name: "Doll Áo Len" },
+  { area: "r4c3", size: "normal", img: "images/product-11.jpg", name: "Móc Khoá Cười" },
 ];
 
 function renderProducts() {
@@ -50,32 +21,11 @@ function renderProducts() {
   grid.innerHTML = PRODUCTS.map((p) => `
     <div class="product-card bento-${p.size}" style="grid-area:${p.area}">
       <div class="product-thumb">
-        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.closest('.product-thumb').classList.add('thumb-fallback')">
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
       </div>
-      <div class="product-name">${p.name}</div>
-      <div class="product-meta">${p.type}</div>
-      <div class="product-price">${p.price}</div>
-      <div class="product-actions">
-        <a href="#lien-he" class="btn btn-outline btn-small btn-block">Xem chi tiết</a>
-        <a href="#lien-he" class="btn btn-primary btn-small btn-block">Đặt hàng</a>
-      </div>
+      <p class="product-name">${p.name}</p>
     </div>
   `).join("");
-}
-
-// ===== Mobile nav toggle =====
-function initNavToggle() {
-  const toggle = document.getElementById("navToggle");
-  const nav = document.getElementById("nav");
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
-
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => nav.classList.remove("open"));
-  });
 }
 
 // ===== Footer year =====
@@ -86,6 +36,5 @@ function setFooterYear() {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
-  initNavToggle();
   setFooterYear();
 });
