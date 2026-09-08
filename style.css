@@ -528,7 +528,8 @@ p { margin: 0 0 1em; }
   .sparkle-1 { font-size: 2.4rem; top: -26px; left: 140px; }
   .flash-left-1, .flash-left-2, .flash-right-1, .flash-right-2 { display: none; }
 
-  .product-grid { grid-template-columns: 1fr 1fr; }
+  .product-grid { grid-template-columns: 1fr; gap: 28px; }
+  .bento-normal .product-thumb { width: 72%; }
 }
 
 @media (max-width: 420px) {
