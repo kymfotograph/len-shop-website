@@ -73,6 +73,18 @@ const PRODUCTS = [
   { area: "l19a", size: "normal", img: "images/product-51.jpg", name: "Plush Charm" },
   { area: "l19b", size: "normal", img: "images/product-52.jpg", name: "Doll Charm" },
   { area: "l19big", size: "large", img: "images/product-53.jpg", name: "Featured Piece" },
+  // Line 20 (3 cards)
+  { area: "l20a", size: "normal", img: "images/product-54.jpg", name: "Handmade Charm" },
+  { area: "l20b", size: "normal", img: "images/product-55.jpg", name: "Custom Doll" },
+  { area: "l20c", size: "normal", img: "images/product-56.jpg", name: "Keychain Charm" },
+  // Line 21 (3 cards)
+  { area: "l21a", size: "normal", img: "images/product-57.jpg", name: "Mini Charm" },
+  { area: "l21b", size: "normal", img: "images/product-58.jpg", name: "Plush Charm" },
+  { area: "l21c", size: "normal", img: "images/product-59.jpg", name: "Doll Charm" },
+  // Line 22 (3 cards)
+  { area: "l22a", size: "normal", img: "images/product-60.jpg", name: "Custom Figure" },
+  { area: "l22b", size: "normal", img: "images/product-61.jpg", name: "Handmade Charm" },
+  { area: "l22c", size: "normal", img: "images/product-62.jpg", name: "Keychain Charm" },
 ];
 
 function renderProducts() {
