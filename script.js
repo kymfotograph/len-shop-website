@@ -86,26 +86,25 @@ const PRODUCTS = [
   { area: "l22b", size: "normal", img: "images/product-61.jpg", name: "Handmade Charm" },
   { area: "l22c", size: "normal", img: "images/product-62.jpg", name: "Keychain Charm" },
   // Line 23
-  { area: "l23a", size: "normal", img: "images/product-63.jpg", name: "Keychain Charm" },
-  { area: "l23b", size: "normal", img: "images/product-64.jpg", name: "Mini Charm" },
-  { area: "l23big", size: "large", img: "images/product-65.jpg", name: "Doll Charm" },
+  { area: "l23a", size: "normal", img: "images/product-64.jpg", name: "Custom Doll", pos: "center 50%" },
+  { area: "l23b", size: "normal", img: "images/product-77.jpg", name: "Plush Charm", pos: "center 40%" },
+  { area: "l23big", size: "large", img: "images/product-65.jpg", name: "Keychain Charm", pos: "center 50%" },
   // Line 24
-  { area: "l24w", size: "wide", img: "images/product-66.jpg", name: "Handmade Charm" },
-  { area: "l24n", size: "normal", img: "images/product-67.jpg", name: "Custom Doll" },
+  { area: "l24a", size: "normal", img: "images/product-73.jpg", name: "Mini Charm", pos: "center 30%" },
+  { area: "l24b", size: "normal", img: "images/product-72.jpg", name: "Doll Charm", pos: "center 60%" },
+  { area: "l24c", size: "normal", img: "images/product-76.jpg", name: "Handmade Charm", pos: "center 40%" },
   // Line 25
-  { area: "l25a", size: "normal", img: "images/product-68.jpg", name: "Plush Charm" },
-  { area: "l25b", size: "normal", img: "images/product-69.jpg", name: "Keychain Charm" },
-  { area: "l25c", size: "normal", img: "images/product-70.jpg", name: "Mini Charm" },
+  { area: "l25a", size: "normal", img: "images/product-69.jpg", name: "Custom Doll", pos: "center 50%" },
+  { area: "l25b", size: "normal", img: "images/product-68.jpg", name: "Plush Charm", pos: "center 60%" },
+  { area: "l25big", size: "large", img: "images/product-75.jpg", name: "Keychain Charm", pos: "center 20%" },
   // Line 26
-  { area: "l26w", size: "wide", img: "images/product-71.jpg", name: "Doll Charm" },
-  { area: "l26n", size: "normal", img: "images/product-72.jpg", name: "Handmade Charm" },
+  { area: "l26a", size: "normal", img: "images/product-63.jpg", name: "Mini Charm", pos: "center 50%" },
+  { area: "l26b", size: "normal", img: "images/product-71.jpg", name: "Doll Charm", pos: "center 50%" },
+  { area: "l26c", size: "normal", img: "images/product-66.jpg", name: "Handmade Charm", pos: "center 50%" },
   // Line 27
-  { area: "l27a", size: "normal", img: "images/product-73.jpg", name: "Custom Doll" },
-  { area: "l27b", size: "normal", img: "images/product-74.jpg", name: "Plush Charm" },
-  { area: "l27big", size: "large", img: "images/product-75.jpg", name: "Keychain Charm" },
-  // Line 28
-  { area: "l28w", size: "wide", img: "images/product-76.jpg", name: "Mini Charm" },
-  { area: "l28n", size: "normal", img: "images/product-77.jpg", name: "Doll Charm" },
+  { area: "l27a", size: "normal", img: "images/product-74.jpg", name: "Custom Doll", pos: "center 55%" },
+  { area: "l27b", size: "normal", img: "images/product-67.jpg", name: "Plush Charm", pos: "center 50%" },
+  { area: "l27c", size: "normal", img: "images/product-70.jpg", name: "Keychain Charm", pos: "center 45%" },
 ];
 
 function renderProducts() {

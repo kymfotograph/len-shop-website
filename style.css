@@ -353,12 +353,11 @@ p { margin: 0 0 1em; }
     "l22a  l22b  l22c"
     "l23a  l23big l23big"
     "l23b  l23big l23big"
-    "l24w  l24w  l24n"
-    "l25a  l25b  l25c"
-    "l26w  l26w  l26n"
-    "l27a  l27big l27big"
-    "l27b  l27big l27big"
-    "l28w  l28w  l28n";
+    "l24a  l24b  l24c"
+    "l25a  l25big l25big"
+    "l25b  l25big l25big"
+    "l26a  l26b  l26c"
+    "l27a  l27b  l27c";
   gap: 18px;
 }
 .product-card {
